@@ -1,0 +1,6 @@
+notification:
+  exchange:
+    name: notification.exchange
+    type: topic
+    queue-name: notification.queue
+    routing-key: notification.routing-key

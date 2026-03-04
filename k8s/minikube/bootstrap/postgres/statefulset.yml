@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: StatefulSet
+
+metadata:
+  name: postgres-statefulset
+  labels:
+    app: postgres
+
+spec:
+  replicas: 1
+  serviceName: postgres-service # This should match the name of the Service defined in service.yml
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      name: postgres
+      labels:
+        app: postgres
+    spec:
+      volumes:
+        - name: postgres-storage
+          persistentVolumeClaim:
+            claimName: postgres-pvc  # This should match the name of the PersistentVolumeClaim defined in volume.yml
+      containers:
+        - name: postgres
+          image: postgres:18-alpine
+          imagePullPolicy: IfNotPresent
+          restartPolicy: Always
+          volumeMounts:
+            - name: postgres-storage
+              mountPath: /var/lib/postgresql
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Gi"
+              cpu: "500m"
+          envFrom:
+            - configMapRef:
+                name: postgres-config  # This should match the name of the ConfigMap defined in configmap.yml

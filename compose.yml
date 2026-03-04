@@ -1,0 +1,126 @@
+services:
+  postgres:
+    container_name: postgres18
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_USER: msstrainz
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+  pgadmin:
+    container_name: pgadmin9
+    image: dpage/pgadmin4:9.12.0
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    networks:
+      - postgres
+    restart: unless-stopped
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - spring
+  rabbitmq:
+    image: rabbitmq:3.9.11-management-alpine
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - spring
+  eureka-server:
+    image: wanemar/eureka-server:1.0.0
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - spring
+    depends_on:
+      - zipkin
+  apigw:
+    image: wanemar/apigw:1.0.0
+    container_name: apigw
+    ports:
+      - "9003:9003"
+    environment:
+      - EUREKA_SERVER=http://eureka-server:8761/eureka/
+    networks:
+      - spring
+    depends_on:
+      - zipkin
+      - eureka-server
+  customer:
+    image: wanemar/customer:1.0.0
+    container_name: customer
+    ports:
+      - "9000:9000"
+    environment:
+      - SPRING_PROFILES_ACTIVE=eureka
+      - EUREKA_SERVER=http://eureka-server:8761/eureka/
+      - CUSTOMER_DB_URL=jdbc:postgresql://postgres:5432/customerdb
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_PORT=5672
+    networks:
+      - spring
+      - postgres
+    depends_on:
+      - zipkin
+      - postgres
+      - rabbitmq
+  fraud:
+    image: wanemar/fraud:1.0.0
+    container_name: fraud
+    ports:
+      - "9001:9001"
+    environment:
+      - SPRING_PROFILES_ACTIVE=eureka
+      - EUREKA_SERVER=http://eureka-server:8761/eureka/
+      - FRAUD_DB_URL=jdbc:postgresql://postgres:5432/fraudb
+    networks:
+      - spring
+      - postgres
+    depends_on:
+      - zipkin
+      - postgres
+      - rabbitmq
+  notification:
+    image: wanemar/notification:1.0.0
+    container_name: notification
+    ports:
+      - "9002:9002"
+    environment:
+      - SPRING_PROFILES_ACTIVE=eureka
+      - NOTIFICATION_DB_URL=jdbc:postgresql://postgres:5432/notificationdb
+      - EUREKA_SERVER=http://eureka-server:8761/eureka/
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_PORT=5672
+    networks:
+      - spring
+      - postgres
+    depends_on:
+      - zipkin
+      - postgres
+      - rabbitmq
+networks:
+  postgres:
+    driver: bridge
+  spring:
+    driver: bridge
+
+volumes:
+  postgres:
+  pgadmin:

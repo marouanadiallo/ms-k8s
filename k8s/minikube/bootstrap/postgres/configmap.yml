@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: postgres-config
+
+data:
+  POSTGRES_DB: msstrainzdb
+  POSTGRES_USER: msstrainz
+  POSTGRES_PASSWORD: password

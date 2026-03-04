@@ -1,0 +1,33 @@
+server:
+  port: 9001
+
+eureka:
+  client:
+    enabled: false
+
+spring:
+  application:
+    name: fraud-service
+  main:
+    banner-mode: off
+
+  datasource:
+    url: ${FRAUD_DB_URL:jdbc:postgresql://localhost:5432/fraudb}
+    username: ${FRAUD_DB_USERNAME:msstrainz}
+    password: ${FRAUD_DB_PASSWORD:password}
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      auto-commit: false
+      idle-timeout: 30000
+      connection-timeout: 20000
+      max-lifetime: 1800000
+      transaction-isolation: TRANSACTION_READ_COMMITTED
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+logging:
+  pattern:
+    correlation: "[%X{ traceId:-},%X{ spanId:-}]"

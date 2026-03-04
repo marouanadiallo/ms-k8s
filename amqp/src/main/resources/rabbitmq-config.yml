@@ -4,3 +4,10 @@ notification:
     type: topic
     queue-name: notification.queue
     routing-key: notification.routing-key
+
+spring:
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME:guest}
+    password: ${RABBITMQ_PASSWORD:guest}

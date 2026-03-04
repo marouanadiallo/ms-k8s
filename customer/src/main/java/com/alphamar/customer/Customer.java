@@ -1,4 +1,4 @@
-package com.alphamar.eurekaserver.customer;
+package com.alphamar.customer;
 
 public record Customer(String id, String name, String email) {
     public static Customer of(String name, String email) {

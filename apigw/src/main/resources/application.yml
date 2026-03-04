@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka/}
     fetch-registry: true
     register-with-eureka: true
 spring:
@@ -14,17 +14,17 @@ spring:
     banner-mode: off
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
-      routes:
-        - id: customer-service
-          uri: lb://CUSTOMER-SERVICE
-          predicates:
-            - Path=/customers/**
-          filters:
-            - stripPrefix=0
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+              lower-case-service-id: true
+          routes:
+            - id: customer-service
+              uri: lb://CUSTOMER-SERVICE
+              predicates:
+                - Path=/customers/**
 management:
   tracing:
     sampling:
@@ -32,6 +32,3 @@ management:
 logging:
   pattern:
     correlation: "[%X{ traceId:-},%X{ spanId:-}]"
-  level:
-    org.springframework.cloud.gateway: DEBUG
-    org.springframework.cloud.loadbalancer: DEBUG

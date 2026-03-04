@@ -1,4 +1,4 @@
-package com.alphamar.eurekaserver.customer;
+package com.alphamar.customer;
 
 
 public class CustomerApplicationTest {

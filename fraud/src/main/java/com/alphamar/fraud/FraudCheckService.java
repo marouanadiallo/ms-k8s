@@ -1,9 +1,10 @@
-package com.alphamar.eurekaserver.fraud;
+package com.alphamar.fraud;
 
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Service;
 
 public interface FraudCheckService {
+    Boolean isFraudster(String customerEmail);
     Boolean isFraudster(Long customerId);
 }
 
@@ -13,6 +14,16 @@ class FraudCheckServiceImpl implements FraudCheckService {
 
     public FraudCheckServiceImpl(JdbcClient jdbcClient) {
         this.jdbcClient = jdbcClient;
+    }
+
+    @Override
+    public Boolean isFraudster(String customerEmail) {
+        var sql = "SELECT is_fraudster FROM fraud_history WHERE customer_email = ?";
+        return jdbcClient.sql(sql)
+                .param(customerEmail)
+                .query(
+                        (rs) -> rs.next() && rs.getBoolean("is_fraudster")
+                );
     }
 
     @Override

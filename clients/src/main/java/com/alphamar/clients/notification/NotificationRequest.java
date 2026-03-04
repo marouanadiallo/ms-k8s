@@ -1,4 +1,4 @@
-package com.alphamar.notification;
+package com.alphamar.clients.notification;
 
 public record NotificationRequest (
     Long toCustomerId,

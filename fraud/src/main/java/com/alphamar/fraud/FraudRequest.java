@@ -1,4 +1,4 @@
 package com.alphamar.fraud;
 
-public record FraudRequest() {
+public record FraudRequest(Long customerId, String customerEmail) {
 }

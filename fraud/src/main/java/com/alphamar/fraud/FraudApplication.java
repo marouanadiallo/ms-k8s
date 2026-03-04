@@ -1,4 +1,4 @@
-package com.alphamar.eurekaserver.fraud;
+package com.alphamar.fraud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

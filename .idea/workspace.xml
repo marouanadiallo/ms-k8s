@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df2b5dcc-2e2f-430d-8318-44d7e610f1bc" name="Changes" comment="" />
+    <list default="true" id="df2b5dcc-2e2f-430d-8318-44d7e610f1bc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/resources/application-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/minikube/customer/deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/minikube/customer/deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/minikube/fraud/deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/minikube/fraud/deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/minikube/notification/deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/minikube/notification/deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/resources/application-prod.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

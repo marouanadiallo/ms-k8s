@@ -3,3 +3,9 @@ spring:
     url: ${FRAUD_DB_URL}
     username: ${FRAUD_DB_USERNAME}
     password: ${FRAUD_DB_PASSWORD}
+
+management:
+  tracing:
+    export:
+      zipkin:
+        endpoint: ${ZIPKIN_BASE_URL}/api/v2/spans

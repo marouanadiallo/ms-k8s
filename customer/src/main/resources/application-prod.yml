@@ -3,3 +3,9 @@ spring:
     url: ${CUSTOMER_DB_URL}
     username: ${CUSTOMER_DB_USERNAME}
     password: ${CUSTOMER_DB_PASSWORD}
+
+management:
+  tracing:
+    export:
+      zipkin:
+        endpoint: ${ZIPKIN_BASE_URL}/api/v2/spans

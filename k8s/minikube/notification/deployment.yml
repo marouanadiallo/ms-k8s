@@ -36,3 +36,5 @@ spec:
               value: "password"
             - name: SPRING_PROFILES_ACTIVE
               value: "prod"
+            - name: ZIPKIN_BASE_URL
+              value: http://zipkin:9411

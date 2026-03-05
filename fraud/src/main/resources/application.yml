@@ -28,6 +28,10 @@ management:
   tracing:
     sampling:
       probability: 1.0
+    export:
+      zipkin:
+        connect-timeout: 5s
+        read-timeout: 10s
 logging:
   pattern:
     correlation: "[%X{ traceId:-},%X{ spanId:-}]"

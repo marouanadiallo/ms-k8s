@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: notification-service
+  labels:
+    app: notification-service
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notification-service
+  template:
+    metadata:
+      labels:
+        app: notification-service
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: notification-service
+          image: wanemar/notification:1.0.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9002
+          env:
+            - name: RABBITMQ_HOST
+              value: "rabbitmq"
+            - name: RABBITMQ_PORT
+              value: "5672"
+            - name: NOTIFICATION_DB_URL
+              value: jdbc:postgresql://postgres-service:5432/notificationdb
+            - name: NOTIFICATION_DB_USERNAME
+              value: "msstrainz"
+            - name: NOTIFICATION_DB_PASSWORD
+              value: "password"
+            - name: SPRING_PROFILES_ACTIVE
+              value: "prod"

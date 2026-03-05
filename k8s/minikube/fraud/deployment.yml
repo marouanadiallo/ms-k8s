@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: fraud-service
+  labels:
+    app: fraud-service
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fraud-service
+  template:
+    metadata:
+      labels:
+        app: fraud-service
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: fraud-service
+          image: wanemar/fraud:1.0.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9001
+          env:
+            - name: RABBITMQ_HOST
+              value: "rabbitmq"
+            - name: RABBITMQ_PORT
+              value: "5672"
+            - name: FRAUD_DB_URL
+              value: jdbc:postgresql://postgres-service:5432/fraudb
+            - name: FRAUD_DB_USERNAME
+              value: "msstrainz"
+            - name: FRAUD_DB_PASSWORD
+              value: "password"
+            - name: SPRING_PROFILES_ACTIVE
+              value: "prod"

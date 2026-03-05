@@ -5,71 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df2b5dcc-2e2f-430d-8318-44d7e610f1bc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/amqp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amqp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amqp/src/main/java/com/alphamar/amqp/NotificationExchangeConfigProps.java" beforeDir="false" afterPath="$PROJECT_DIR$/amqp/src/main/java/com/alphamar/amqp/NotificationExchangeConfigProps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amqp/src/main/java/com/alphamar/amqp/NotificationExchangeConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/amqp/src/main/java/com/alphamar/amqp/NotificationExchangeConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amqp/src/main/java/com/alphamar/amqp/RabbitMQConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/amqp/src/main/java/com/alphamar/amqp/RabbitMQConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amqp/src/main/resources/rabbitmq-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/amqp/src/main/resources/rabbitmq-config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apigw/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apigw/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apigw/src/main/java/com/alphamar/apigw/APIGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/apigw/src/main/java/com/alphamar/apigw/APIGatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apigw/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apigw/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clients/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/alphamar/clients/fraud/FraudClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/alphamar/clients/fraud/FraudClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/alphamar/clients/notification/NotificationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/alphamar/clients/notification/NotificationClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/alphamar/clients/notification/NotificationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/alphamar/clients/notification/NotificationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/resources/clients-default.properties" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/resources/clients-default.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/resources/clients-eureka.properties" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/resources/clients-eureka.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/resources/clients-kube.properties" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/resources/clients-kube.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/alphamar/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/alphamar/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/alphamar/customer/CustomerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/alphamar/customer/CustomerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/alphamar/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/alphamar/customer/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/alphamar/customer/CustomerRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/alphamar/customer/CustomerRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/alphamar/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/alphamar/customer/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/alphamar/customer/NotificationPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/alphamar/customer/NotificationPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/alphamar/customer/config.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/alphamar/customer/config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application-eureka.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application-eureka.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/db/migration/V1__customer.sql" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/db/migration/V1__customer.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/test/java/com/alphamar/customer/CustomerApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/test/java/com/alphamar/customer/CustomerApplicationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/java/com/alphamar/eurekaserver/EurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/java/com/alphamar/eurekaserver/EurekaServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/test/java/com/alphamar/eurekaserver/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/test/java/com/alphamar/eurekaserver/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/alphamar/fraud/FraudApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/alphamar/fraud/FraudApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/alphamar/fraud/FraudCheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/alphamar/fraud/FraudCheckService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/alphamar/fraud/FraudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/alphamar/fraud/FraudController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/alphamar/fraud/FraudHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/alphamar/fraud/FraudHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/alphamar/fraud/FraudRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/alphamar/fraud/FraudRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/alphamar/fraud/FraudulentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/alphamar/fraud/FraudulentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/resources/application-eureka.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/resources/application-eureka.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/customer/deployment.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/customer/service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/fraud/deployment.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/fraud/service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/notification/deployment.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/notification/service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/resources/clients-kube.properties" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/resources/clients-prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fraud/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/resources/application-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/resources/db/migration/V1__fraudInit.sql" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/resources/db/migration/V1__fraudInit.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/minikube/bootstrap/postgres/configmap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/postgres/configmap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/minikube/bootstrap/postgres/service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/postgres/service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/minikube/bootstrap/postgres/statefulset.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/postgres/statefulset.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/minikube/bootstrap/postgres/volume.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/postgres/volume.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/configmap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/configmap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/rbac.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/rbac.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/statefulset.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/statefulset.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/minikube/bootstrap/zipkin/service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/zipkin/service.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/minikube/bootstrap/zipkin/statefulset.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/zipkin/statefulset.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/alphamar/notification/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/alphamar/notification/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/alphamar/notification/NotificationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/alphamar/notification/NotificationApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/alphamar/notification/NotificationConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/alphamar/notification/NotificationConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/alphamar/notification/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/alphamar/notification/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/resources/application-eureka.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/resources/application-eureka.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/resources/application-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/resources/db/migration/V1__notificationInit.sql" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/resources/db/migration/V1__notificationInit.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +39,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "marouanadiallo"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/marouanadiallo/ms-k8s.git",

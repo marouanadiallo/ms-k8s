@@ -1,5 +1,5 @@
 spring:
   datasource:
-    url: ${CUSTOMER_DB_URL}
-    username: ${CUSTOMER_DB_USERNAME}
-    password: ${CUSTOMER_DB_PASSWORD}
+    url: ${NOTIFICATION_DB_URL}
+    username: ${NOTIFICATION_DB_USERNAME}
+    password: ${NOTIFICATION_DB_PASSWORD}

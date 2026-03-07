@@ -23,18 +23,23 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 9002
+          envFrom:
+            - configMapRef:
+                name: common-env-config
+                optional: false
           env:
-            - name: RABBITMQ_HOST
-              value: "rabbitmq"
-            - name: RABBITMQ_PORT
-              value: "5672"
             - name: NOTIFICATION_DB_URL
-              value: jdbc:postgresql://postgres-service:5432/notificationdb
+              valueFrom:
+                secretKeyRef:
+                  name: notification-secrets
+                  key: ndb-url
             - name: NOTIFICATION_DB_USERNAME
-              value: "msstrainz"
+              valueFrom:
+                secretKeyRef:
+                  name: notification-secrets
+                  key: ndb-username
             - name: NOTIFICATION_DB_PASSWORD
-              value: "password"
-            - name: SPRING_PROFILES_ACTIVE
-              value: "prod"
-            - name: ZIPKIN_BASE_URL
-              value: http://zipkin:9411
+              valueFrom:
+                secretKeyRef:
+                  name: notification-secrets
+                  key: ndb-password

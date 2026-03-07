@@ -22,18 +22,23 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 9000
+          envFrom:
+            - configMapRef:
+                name: common-env-config
+                optional: false
           env:
-            - name: SPRING_PROFILES_ACTIVE
-              value: prod
             - name: CUSTOMER_DB_URL
-              value: jdbc:postgresql://postgres-service:5432/customerdb
+              valueFrom:
+                secretKeyRef:
+                  name: customer-secrets
+                  key: cdb-url
             - name: CUSTOMER_DB_USERNAME
-              value: msstrainz
+              valueFrom:
+                secretKeyRef:
+                  name: customer-secrets
+                  key: cdb-username
             - name: CUSTOMER_DB_PASSWORD
-              value: password
-            - name: RABBITMQ_HOST
-              value: rabbitmq
-            - name: RABBITMQ_PORT
-              value: "5672"
-            - name: ZIPKIN_BASE_URL
-              value: http://zipkin:9411
+              valueFrom:
+                secretKeyRef:
+                  name: customer-secrets
+                  key: cdb-password
